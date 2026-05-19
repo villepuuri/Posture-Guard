@@ -1,0 +1,21 @@
+# ninja log v5
+14652	15673	1779192691370906718	Movesense_dfu.zip	98670b420b68fc71
+14651	15117	1779192690829570056	Movesense_w_settings.hex	8e00058ab86705da
+14524	14650	1779192690281625366	Movesense.hex	543c97c67ab54f92
+16	107	1779105567501432246	generated/app-resources/resources.c.h	ce474785a1932425
+16	107	1779105567501432246	generated/app-resources/resources.h	ce474785a1932425
+16	107	1779105567501432246	generated/app-resources/resources.cpp	ce474785a1932425
+16	107	1779105567501432246	app-resources.wbo	ce474785a1932425
+11	121	1779105567511947732	movesense.ld	258d6739ac8b32a8
+15117	15229	1779192690941161591	Movesense_combined.hex	e856d0186c06693a
+110	238	1779105567631889410	app-metadata/metadata.cpp	d08313b08c3bba5a
+715	1602	1779105568993879768	CMakeFiles/Movesense.dir/generated/app-resources/resources.cpp.obj	31064dee530604be
+17	1113	1779192676822585217	CMakeFiles/Movesense.dir/PostureService.cpp.obj	e27cef7749654ef0
+110	712	1779105568100770178	generated/sbem-code/sbem_definitions.h	f7a8d8b38a8e4bbf
+717	1544	1779105568936614093	CMakeFiles/Movesense.dir/app-metadata/metadata.cpp.obj	aaebc14db0de231
+1114	14524	1779192690225340266	Movesense	a0acefde1a075546
+110	712	1779105568100770178	generated/sbem-code/sbem_definitions.cpp	f7a8d8b38a8e4bbf
+715	1496	1779105568880655582	CMakeFiles/Movesense.dir/movesense/posture_guard/movesense_code/movesense-device-lib/MovesenseCoreLib/src/movesense_heap.c.obj	8601143c1598118d
+714	2334	1779105569725762361	CMakeFiles/Movesense.dir/generated/sbem-code/sbem_definitions.cpp.obj	849db75c7b767927
+15	881	1779191706369418155	CMakeFiles/Movesense.dir/App.cpp.obj	d9b8ee918579ecd1
+19	1045	1779193155432141885	Movesense_dfu.zip	98670b420b68fc71

@@ -1,0 +1,11 @@
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/create_combined_hex.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/dfupkg.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/rebuild_cache.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/flash_all.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/Movesense.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/flash.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/backup_manufacturing_data.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/create_hex.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/pkgs.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/flash_pkg.dir
+/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/CMakeFiles/edit_cache.dir

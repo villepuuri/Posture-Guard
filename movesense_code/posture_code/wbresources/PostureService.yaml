@@ -1,0 +1,32 @@
+# This file defines Suunto Whiteboard API for Movesense Hackathon 2016 sample
+#
+swagger: '2.0'
+
+# Document metadata
+info:
+  version: "0.0.1"
+  title: Posture Service API
+  description: |
+    This file defines the API for Posture Service example
+  termsOfService: NA
+  contact:
+    name: Ville Puuri
+
+# Paths
+paths:
+  /Custom/PostureService:
+    get:
+      description: |
+        Get a "Posture angle" value
+      responses:
+        200:
+          description: Postion angle value
+          schema:
+            $ref: '#/definitions/PostureValue'
+
+
+definitions:
+  PostureValue:
+    description: A posture angle value
+    type: integer
+    format: int32
