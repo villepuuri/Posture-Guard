@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:mdsflutter/Mds.dart';
@@ -105,7 +104,7 @@ class _DataPageState extends State<DataPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              value.toString(),
+              "${value.toString()}°",
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ],

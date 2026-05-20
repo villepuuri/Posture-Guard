@@ -23,9 +23,7 @@ class SearchingAndConnectingWidget extends StatefulWidget {
 
 class _SearchingAndConnectingWidgetState
     extends State<SearchingAndConnectingWidget> {
-  List<Sensor> foundDevices = [
-    Sensor(name: "Movesense 123123123", address: "address")
-  ];
+  List<Sensor> foundDevices = [];
 
   @override
   void initState() {
@@ -132,8 +130,11 @@ class _SearchingAndConnectingWidgetState
                   contentPadding: const EdgeInsets.symmetric(vertical: 5),
                   enabled: sensor.state != SensorState.disabled,
                   trailing: sensor.state == SensorState.connecting
-                      ? CircularProgressIndicator(color: Colors.black,)
-                      : sensor.state != SensorState.disabled ? IconButton(
+                      ? CircularProgressIndicator(
+                          color: Theme.of(context).colorScheme.primary,
+                        )
+                      : sensor.state != SensorState.disabled
+                      ? IconButton(
                           onPressed: () {
                             // Stop the scan
                             Mds.stopScan();
@@ -152,12 +153,13 @@ class _SearchingAndConnectingWidgetState
                             connectToMovesense(sensor);
                           },
                           icon: Icon(Icons.arrow_forward),
-                        ) : null,
+                        )
+                      : null,
                 ),
               )
               .toList() +
           [
-            const SizedBox(height: 20,),
+            const SizedBox(height: 20),
 
             !isSomeSensorConnecting
                 ? LinearProgressIndicator(

@@ -22,23 +22,36 @@ class AppThemeData {
   );
 
   // Text themes
-  // todo: Change text themes to local from Google fonts
+  static TextStyle font({
+    double? fontSize,
+    Color? color,
+    double? height,
+    double? letterSpacing,
+    FontWeight? fontWeight,
+  }) => GoogleFonts.aldrich(
+    fontSize: fontSize,
+    color: color,
+    height: height,
+    letterSpacing: letterSpacing,
+    fontWeight: fontWeight,
+  );
+
   static TextTheme textTheme(Color textColor) => TextTheme(
     // Titles are titles of pages
-    titleLarge: GoogleFonts.slabo13px(
+    titleLarge: font(
       fontSize: 50,
       color: textColor,
       height: 1.2,
       letterSpacing: -1,
       fontWeight: FontWeight.w300,
     ),
-    titleMedium: GoogleFonts.slabo13px(
+    titleMedium: font(
       fontSize: 32,
       color: textColor,
       height: 1.2,
       letterSpacing: -0.6,
     ),
-    titleSmall: GoogleFonts.slabo13px(
+    titleSmall: font(
       fontSize: 26,
       color: textColor,
       height: 1.2,
@@ -46,37 +59,41 @@ class AppThemeData {
     ),
 
     // Headlines are in text chapters
-    headlineLarge: GoogleFonts.slabo13px(fontSize: 24, color: textColor),
-    headlineMedium: GoogleFonts.slabo13px(
+    headlineLarge: font(fontSize: 24, color: textColor),
+    headlineMedium: font(
       fontSize: 20,
       fontWeight: FontWeight.w400,
       color: textColor,
     ),
-    headlineSmall: GoogleFonts.slabo13px(
+    headlineSmall: font(
       fontSize: 16,
       fontWeight: FontWeight.w500,
       color: textColor,
     ),
 
     // Body texts
-    bodyLarge: GoogleFonts.slabo13px(
+    bodyLarge: font(
       fontSize: 18,
       fontWeight: FontWeight.w400,
       color: textColor,
       height: 1.4,
     ),
-    bodyMedium: GoogleFonts.slabo13px(
+    bodyMedium: font(
       fontSize: 16,
       fontWeight: FontWeight.w400,
       color: textColor,
       height: 1.4,
     ),
-    bodySmall: GoogleFonts.slabo13px(fontSize: 12, color: textColor, height: 1.4),
+    bodySmall: font(
+      fontSize: 12,
+      color: textColor,
+      height: 1.4,
+    ),
 
     /* Labels */
 
     // External links
-    labelLarge: GoogleFonts.slabo13px(
+    labelLarge: font(
       fontSize: 18,
       height: 1.4,
       color: textColor,
@@ -84,7 +101,7 @@ class AppThemeData {
     ),
 
     // Internal links
-    labelMedium: GoogleFonts.slabo13px(
+    labelMedium: font(
       fontSize: 18,
       height: 1.4,
       color: textColor,
@@ -92,7 +109,7 @@ class AppThemeData {
     ),
 
     // Small info texts
-    labelSmall: GoogleFonts.slabo13px(
+    labelSmall: font(
       fontSize: 16,
       height: 1.4,
       fontWeight: FontWeight.w700,
@@ -141,7 +158,10 @@ class AppThemeData {
         borderRadius: BorderRadius.all(Radius.circular(18)),
       ),
     ),
-    textButtonTheme: textButtonTheme(textTheme(black), lightColorScheme.primary),
+    textButtonTheme: textButtonTheme(
+      textTheme(black),
+      lightColorScheme.primary,
+    ),
   );
 
   static final darkTheme = ThemeData(
