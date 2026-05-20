@@ -96,6 +96,38 @@ class _DataPageState extends State<DataPage> {
 
   @override
   Widget build(BuildContext context) {
+
+    /// Map an angle value to get the font size accordingly
+    double mapValue(angle, minAngle, maxAngle, minFontSize, maxFontSize) {
+      return minFontSize +
+          ((angle - minAngle) *
+              (maxFontSize - minFontSize) /
+              (maxAngle - minAngle));
+    }
+
+    /// Returns a font size for the angle value based on the angle value deflection
+    double getFontSize(int angleValue) {
+      double firstAngleLimit = 20;
+      double secondAngleLimit = 40;
+      double thirdAngleLimit = 60;
+
+      if (angleValue < 0) {
+        angleValue *= -1;
+      }
+
+      if (angleValue <= firstAngleLimit) {
+        return mapValue(angleValue, 0, firstAngleLimit, 50, 60);
+      } else if (angleValue > firstAngleLimit &&
+          angleValue <= secondAngleLimit) {
+        return mapValue(angleValue, firstAngleLimit, secondAngleLimit, 60, 85);
+      } else if (angleValue > secondAngleLimit &&
+          angleValue <= thirdAngleLimit) {
+        return mapValue(angleValue, secondAngleLimit, thirdAngleLimit, 85, 120);
+      } else {
+        return 120;
+      }
+    }
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
@@ -103,9 +135,13 @@ class _DataPageState extends State<DataPage> {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "${value.toString()}°",
-              style: Theme.of(context).textTheme.titleLarge,
+            AnimatedDefaultTextStyle(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+              style: Theme.of(
+                context,
+              ).textTheme.titleLarge!.copyWith(fontSize: getFontSize(value)),
+              child: Text("${value.toString()}°"),
             ),
           ],
         ),
