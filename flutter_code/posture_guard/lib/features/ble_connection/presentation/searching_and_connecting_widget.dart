@@ -161,7 +161,7 @@ class _SearchingAndConnectingWidgetState
 
             !isSomeSensorConnecting
                 ? LinearProgressIndicator(
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.primary,
                     backgroundColor: Colors.transparent,
                   )
                 : SizedBox(),

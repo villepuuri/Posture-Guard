@@ -23,12 +23,6 @@ class _WelcomePageState extends State<WelcomePage> {
               onPressed: () {
                 Navigator.pushNamed(context, '/sensor_page');
               },
-              style: TextButton.styleFrom(
-                padding: EdgeInsets.all(0),
-                foregroundColor: Colors.black, // Text/Icon color
-                backgroundColor: Colors.transparent, // Background color
-                textStyle: Theme.of(context).textTheme.labelMedium,
-              ),
               child: Text("Search sensors"),
             ),
           ],

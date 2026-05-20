@@ -29,7 +29,7 @@ class _DataPageState extends State<DataPage> {
       _sensor = ModalRoute.of(context)!.settings.arguments as Sensor;
 
       _startTimer();
-      debugSubscriptionId = _startDebugLogger();
+      // debugSubscriptionId = _startDebugLogger();
 
       _initialized = true;
     }
