@@ -1,4 +1,4 @@
-# Install script for directory: /movesense/posture_guard/movesense_code/movesense-device-lib/posture_code
+# Install script for directory: /movesense/posture_code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/movesense/posture_guard/movesense_code/movesense-device-lib/posture_build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/movesense/posture_build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

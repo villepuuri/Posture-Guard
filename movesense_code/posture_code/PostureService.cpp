@@ -164,7 +164,7 @@ void PostureService::onNotify(wb::ResourceId resourceId,
             value.convertTo<const WB_RES::AccData &>();
         const wb::Array<wb::FloatVector3D> &arrayData = linearAccelerationValue.arrayAcc;
 
-        for (size_t i = 0; i < arrayData.size(); i++)
+        for (size_t i = BUFFER_SIZE - 10; i < arrayData.size(); i++)
         {
             const wb::FloatVector3D &accValue = arrayData[i];
 
@@ -175,16 +175,18 @@ void PostureService::onNotify(wb::ResourceId resourceId,
             DebugLogger::info("Received Acc Data x1000: x=%d, y=%d, z=%d", x, y, z);
 
             // Calculate the angle
-            float radAngle = atan2f(accValue.y, sqrtf(accValue.x * accValue.x + accValue.z * accValue.z));
+            float radAngle = atan2f(accValue.x, accValue.y);
+            // float radAngle = atan2f(accValue.y, sqrtf(accValue.x * accValue.x + accValue.z * accValue.z));
+
             int16_t degAngle = static_cast<int16_t>(radAngle * 180 / M_PI);
             // Consider the direction of the angle based on the z value
-            if (accValue.z < 0 && degAngle > 0)
-            {
-                degAngle = 180 - degAngle;
-            } else if (accValue.z < 0 && degAngle < 0)
-            {
-                degAngle = -180 - degAngle;
-            }
+            // if (accValue.z < 0 && degAngle > 0)
+            // {
+            //     degAngle = 180 - degAngle;
+            // } else if (accValue.z < 0 && degAngle < 0)
+            // {
+            //     degAngle = -180 - degAngle;
+            // }
             DebugLogger::info("Calculated Posture Value: %d", degAngle);
             addAngleToBuffer(degAngle);
         }

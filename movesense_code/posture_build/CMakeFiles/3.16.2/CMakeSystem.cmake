@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Linux")
 set(CMAKE_HOST_SYSTEM_VERSION "6.12.54-linuxkit")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("/movesense/posture_guard/movesense_code/movesense-device-lib/MovesenseCoreLib/toolchain/gcc-nrf52.cmake")
+include("/movesense/MovesenseCoreLib/toolchain/gcc-nrf52.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")
